@@ -1,16 +1,6 @@
 import "./App.css"
-
-import { OptimizelyFeature, withOptimizely } from "@optimizely/react-sdk"
-
-function Button(props) {
-  function onClick(event) {
-    props.optimizely.track("clickColor")
-  }
-
-  return <button onClick={onClick}>Do the thing</button>
-}
-
-const WrappedButton = withOptimizely(Button)
+import Button from "./Button.js"
+import { OptimizelyFeature } from "@optimizely/react-sdk"
 
 function App({ isOrange }) {
   let linkStyle = { fontSize: "72px", textDecoration: "none" }
@@ -39,7 +29,7 @@ function App({ isOrange }) {
             )
           }}
         </OptimizelyFeature>
-        <WrappedButton />
+        <Button />
       </header>
     </div>
   )
