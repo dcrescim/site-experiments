@@ -4,10 +4,23 @@ import "./index.css"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 
+import { createInstance, OptimizelyProvider } from "@optimizely/react-sdk"
+
+const optimizely = createInstance({
+  sdkKey: "4By6HmL598gddRgMS12sD",
+})
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <OptimizelyProvider
+      optimizely={optimizely}
+      timeout={500}
+      user={{ id: String(Math.random()) }}
+    >
+      <App />
+    </OptimizelyProvider>
   </React.StrictMode>,
+
   document.getElementById("root")
 )
 
