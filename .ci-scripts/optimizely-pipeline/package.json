@@ -1,0 +1,12 @@
+{
+  "name": "optimizely-pipeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "deep-equal": "^2.0.5",
+    "request": "^2.88.2"
+  }
+}
