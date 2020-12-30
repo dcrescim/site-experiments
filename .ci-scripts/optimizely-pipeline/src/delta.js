@@ -95,7 +95,7 @@ function merge(existingEntity, entity){
             }
         }
     }
-    if(mergedEntity.page_ids === undefined || mergedEntity.length == 0){
+    if(mergedEntity.page_ids !== undefined && mergedEntity.page_ids.length == 0){
         delete mergedEntity['page_ids']
     }
     
