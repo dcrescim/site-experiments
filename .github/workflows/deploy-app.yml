@@ -1,11 +1,11 @@
-name: Optimizely Experiment Pipeline
+name: Deploy App
 
 on:
   push:
     branches: [ main, optimizely-pipeline ]
 
 jobs:
-  apply-experiments:
+  deploy-app:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Code
@@ -16,8 +16,6 @@ jobs:
       run: yarn install
     - name: Build site
       run: yarn build
-      env:
-        OPTIMIZELY_ENV_KEY: ${{ secrets.OPTIMIZELY_ENV_KEY }}
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:

@@ -7,7 +7,7 @@ import reportWebVitals from "./reportWebVitals"
 import { createInstance, OptimizelyProvider } from "@optimizely/react-sdk"
 
 const optimizely = createInstance({
-  sdkKey: process.env.OPTIMIZELY_ENV_KEY,
+  sdkKey: "UrCiRWnyiX7AYTrSYVeeB",
 })
 
 ReactDOM.render(
