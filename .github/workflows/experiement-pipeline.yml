@@ -5,7 +5,7 @@ on:
     branches: [ main, optimizely-pipeline ]
 
 jobs:
-  build:
+  apply-experiments:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Code
@@ -16,3 +16,6 @@ jobs:
       run: cd .ci-scripts/optimizely-pipeline && npm ci
     - name: Apply Experiments
       run: cd .ci-scripts/optimizely-pipeline && npm start
+      env:
+        API_TOKEN: ${{ secrets.API_TOKEN }}
+        PROJECT_ID: ${{ secrets.PROJECT_ID }}
