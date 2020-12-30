@@ -9,5 +9,9 @@
                "type":"boolean"
             }
          ]
+    },
+    {
+        "key": "demo_feature",
+        "project_id": 19728473058
     }
 ]
