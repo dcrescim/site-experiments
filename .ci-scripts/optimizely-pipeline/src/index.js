@@ -24,14 +24,14 @@ async function main() {
         console.log(`${entityType} to Delete`)
         console.log(entitiesToDelete)
 
-        // await api.createEntities(entityType, entitiesToCreate)
-        // await api.updateEntities(entityType, entitiesToUpdate)
-        // await api.deleteEntities(entityType, entitiesToDelete)
+        await api.createEntities(entityType, entitiesToCreate)
+        await api.updateEntities(entityType, entitiesToUpdate)
+        await api.deleteEntities(entityType, entitiesToDelete)
     }
 }
 
 async function getEntities(entityType){
-    var entities = getFileAsJson(`../optimizely/${entityType}.json`)
+    var entities = getFileAsJson(`optimizely/${entityType}.json`)
     //find and add matching feature and event ids to experiments
     if(entityType === 'experiments'){
         const existingFeatures = await api.getEntities('features')

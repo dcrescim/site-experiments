@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "",
   "license": "ISC",
+  "scripts": {
+    "start": "node src/index.js"
+  },
   "dependencies": {
     "deep-equal": "^2.0.5",
     "request": "^2.88.2"
